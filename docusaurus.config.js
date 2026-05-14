@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'GeoGenesis',
+  tagline: '与地学的缘起',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -74,6 +74,7 @@ const config = {
     ],
   ],
 
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,27 +83,30 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+        navbar: {
+          title: 'GeoGenesis',
+          logo: {
+            alt: 'GeoGenesis Logo',
+            src: 'img/GEOGENESIS.svg', // 如果没有logo可以先不管，它会显示文字
+          },
+          items: [
+            {to: '/#about', label: '关于组织', position: 'left'},
+            {to: '/#projects', label: '核心项目', position: 'left'},
+            {to: '/#members', label: '成员节点', position: 'left'},
+            // 这里保留文档链接，你可以把 docs 文件夹当做“组织资料库”或者“长篇访谈文章”的存放地
+            {
+              type: 'docSidebar',
+              sidebarId: 'tutorialSidebar',
+              position: 'right',
+              label: '内部资料库 / 访谈长文', 
+            },
+            {
+              href: 'https://github.com/your-org/geogenesis',
+              label: 'GitHub',
+              position: 'right',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
       footer: {
         style: 'dark',
         links: [

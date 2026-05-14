@@ -28,3 +28,82 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* 自定义 GeoGenesis 样式 */
+:root {
+  --primary-color: #0f2027;
+  --accent-color: #4facfe;
+  --bg-light: #f4f7f6;
+  --card-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg-light: #18191a;
+  --card-bg: #242526;
+  --primary-color: #e3e3e3;
+}
+
+.hero-section {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(15,32,39,0.9), rgba(44,83,100,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: clamp(40px, 5vw, 64px);
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-wrapper {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.custom-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--accent-color);
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
